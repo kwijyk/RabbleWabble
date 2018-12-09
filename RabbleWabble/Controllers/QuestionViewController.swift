@@ -22,11 +22,22 @@ class QuestionViewController: UIViewController {
         return (view as! QuestionView)
     }
     
-    override func viewDidLoad() {
+    // MARK: - View Lifecycle
+    public override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        showQuestion()
     }
-
+    
+    private func showQuestion() {
+        let question = questionGroup.questions[questionIndex]
+        
+        questionView.answerLabel.text = question.answer
+        questionView.promptLabel.text = question.prompt
+        questionView.hintLabel.text = question.hint
+        
+        questionView.answerLabel.isHidden = true
+        questionView.hintLabel.isHidden = true
+    }
 
 }
 
