@@ -16,7 +16,37 @@
 		49DABA0821BD66B500AEB684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DABA0721BD66B500AEB684 /* Assets.xcassets */; };
 		49DABA0A21BD681D00AEB684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DABA0921BD681D00AEB684 /* LaunchScreen.storyboard */; };
 		49DABA0C21BDB6ED00AEB684 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DABA0B21BDB6ED00AEB684 /* QuestionView.swift */; };
+		A54A15BF21E6445900289F1E /* SelectQuestioinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A15BE21E6445900289F1E /* SelectQuestioinGroupViewController.swift */; };
+		A5990CBB2215A9F6001EE12E /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5990CBA2215A9F6001EE12E /* QuestionGroupCell.swift */; };
+		A5990CBE2216DA18001EE12E /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5990CBD2216DA18001EE12E /* QuestionStrategy.swift */; };
+		A5990CC02216DFDE001EE12E /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5990CBF2216DFDE001EE12E /* SequentialQuestionStrategy.swift */; };
+		A5D1FEEC2209C96900E58D0F /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D1FEEB2209C96900E58D0F /* KeyboardViewController.m */; };
+		A5D1FEF02209C96900E58D0F /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A5D1FEE82209C96900E58D0F /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5D1FEEE2209C96900E58D0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49DAB9DE21BD564800AEB684 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5D1FEE72209C96900E58D0F;
+			remoteInfo = Keyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5D1FEF42209C96900E58D0F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A5D1FEF02209C96900E58D0F /* Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		49DAB9E621BD564900AEB684 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +60,25 @@
 		49DABA0721BD66B500AEB684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49DABA0921BD681D00AEB684 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49DABA0B21BDB6ED00AEB684 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		A54A15BE21E6445900289F1E /* SelectQuestioinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestioinGroupViewController.swift; sourceTree = "<group>"; };
+		A5990CBA2215A9F6001EE12E /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
+		A5990CBD2216DA18001EE12E /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
+		A5990CBF2216DFDE001EE12E /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
+		A5D1FEE82209C96900E58D0F /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D1FEEA2209C96900E58D0F /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		A5D1FEEB2209C96900E58D0F /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		A5D1FEED2209C96900E58D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		49DAB9E321BD564900AEB684 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D1FEE52209C96900E58D0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				49DAB9E821BD564900AEB684 /* RabbleWabble */,
+				A5D1FEE92209C96900E58D0F /* Keyboard */,
 				49DAB9E721BD564900AEB684 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				49DAB9E621BD564900AEB684 /* RabbleWabble.app */,
+				A5D1FEE82209C96900E58D0F /* Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,10 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				49DAB9FB21BD586100AEB684 /* AppDelegate */,
-				49DAB9FE21BD5A6900AEB684 /* Models */,
-				49DABA0021BD5AA000AEB684 /* Views */,
 				49DAB9FF21BD5A6C00AEB684 /* Controllers */,
+				49DAB9FE21BD5A6900AEB684 /* Models */,
 				49DAB9FC21BD5A5A00AEB684 /* Resources */,
+				A5990CBC2216D744001EE12E /* Strategies */,
+				49DABA0021BD5AA000AEB684 /* Views */,
 			);
 			path = RabbleWabble;
 			sourceTree = "<group>";
@@ -102,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				49DAB9EB21BD564900AEB684 /* QuestionViewController.swift */,
+				A54A15BE21E6445900289F1E /* SelectQuestioinGroupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,8 +161,28 @@
 				49DABA0921BD681D00AEB684 /* LaunchScreen.storyboard */,
 				49DAB9ED21BD564900AEB684 /* Main.storyboard */,
 				49DABA0B21BDB6ED00AEB684 /* QuestionView.swift */,
+				A5990CBA2215A9F6001EE12E /* QuestionGroupCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A5990CBC2216D744001EE12E /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				A5990CBD2216DA18001EE12E /* QuestionStrategy.swift */,
+				A5990CBF2216DFDE001EE12E /* SequentialQuestionStrategy.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		A5D1FEE92209C96900E58D0F /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A5D1FEEA2209C96900E58D0F /* KeyboardViewController.h */,
+				A5D1FEEB2209C96900E58D0F /* KeyboardViewController.m */,
+				A5D1FEED2209C96900E58D0F /* Info.plist */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,15 +195,34 @@
 				49DAB9E221BD564900AEB684 /* Sources */,
 				49DAB9E321BD564900AEB684 /* Frameworks */,
 				49DAB9E421BD564900AEB684 /* Resources */,
+				A5D1FEF42209C96900E58D0F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A5D1FEEF2209C96900E58D0F /* PBXTargetDependency */,
 			);
 			name = RabbleWabble;
 			productName = RabbleWabble;
 			productReference = 49DAB9E621BD564900AEB684 /* RabbleWabble.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A5D1FEE72209C96900E58D0F /* Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5D1FEF32209C96900E58D0F /* Build configuration list for PBXNativeTarget "Keyboard" */;
+			buildPhases = (
+				A5D1FEE42209C96900E58D0F /* Sources */,
+				A5D1FEE52209C96900E58D0F /* Frameworks */,
+				A5D1FEE62209C96900E58D0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keyboard;
+			productName = Keyboard;
+			productReference = A5D1FEE82209C96900E58D0F /* Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -148,6 +236,10 @@
 				TargetAttributes = {
 					49DAB9E521BD564900AEB684 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
+					};
+					A5D1FEE72209C96900E58D0F = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -165,6 +257,7 @@
 			projectRoot = "";
 			targets = (
 				49DAB9E521BD564900AEB684 /* RabbleWabble */,
+				A5D1FEE72209C96900E58D0F /* Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +273,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5D1FEE62209C96900E58D0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -187,16 +287,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5990CC02216DFDE001EE12E /* SequentialQuestionStrategy.swift in Sources */,
 				49DABA0221BD602E00AEB684 /* Question.swift in Sources */,
 				49DAB9EC21BD564900AEB684 /* QuestionViewController.swift in Sources */,
 				49DAB9EA21BD564900AEB684 /* AppDelegate.swift in Sources */,
 				49DABA0421BD627600AEB684 /* QuestionGroup.swift in Sources */,
 				49DABA0C21BDB6ED00AEB684 /* QuestionView.swift in Sources */,
+				A54A15BF21E6445900289F1E /* SelectQuestioinGroupViewController.swift in Sources */,
 				49DABA0621BD63BE00AEB684 /* QuestionGroupData.swift in Sources */,
+				A5990CBE2216DA18001EE12E /* QuestionStrategy.swift in Sources */,
+				A5990CBB2215A9F6001EE12E /* QuestionGroupCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D1FEE42209C96900E58D0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5D1FEEC2209C96900E58D0F /* KeyboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5D1FEEF2209C96900E58D0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5D1FEE72209C96900E58D0F /* Keyboard */;
+			targetProxy = A5D1FEEE2209C96900E58D0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		49DAB9ED21BD564900AEB684 /* Main.storyboard */ = {
@@ -330,6 +450,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FX7KZ75KQ4;
+				INFOPLIST_FILE = "$(SRCROOT)/RabbleWabble/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sergeygaponov.RabbleWabble;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49DAB9FA21BD567300AEB684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FX7KZ75KQ4;
 				INFOPLIST_FILE = "$(SRCROOT)/RabbleWabble/Resources/Info.plist";
@@ -342,22 +483,42 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Release;
 		};
-		49DAB9FA21BD567300AEB684 /* Release */ = {
+		A5D1FEF12209C96900E58D0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FX7KZ75KQ4;
-				INFOPLIST_FILE = "$(SRCROOT)/RabbleWabble/Resources/Info.plist";
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sergeygaponov.RabbleWabble;
+				PRODUCT_BUNDLE_IDENTIFIER = sergeygaponov.RabbleWabble.Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5D1FEF22209C96900E58D0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FX7KZ75KQ4;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sergeygaponov.RabbleWabble.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -379,6 +540,15 @@
 			buildConfigurations = (
 				49DAB9F921BD567300AEB684 /* Debug */,
 				49DAB9FA21BD567300AEB684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5D1FEF32209C96900E58D0F /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5D1FEF12209C96900E58D0F /* Debug */,
+				A5D1FEF22209C96900E58D0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
