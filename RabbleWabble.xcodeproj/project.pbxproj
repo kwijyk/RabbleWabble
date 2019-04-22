@@ -18,6 +18,8 @@
 		49DABA0C21BDB6ED00AEB684 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DABA0B21BDB6ED00AEB684 /* QuestionView.swift */; };
 		A54A15BF21E6445900289F1E /* SelectQuestioinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A15BE21E6445900289F1E /* SelectQuestioinGroupViewController.swift */; };
 		A5590808226DD10F00D06C7B /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5590807226DD10F00D06C7B /* RandomQuestionStrategy.swift */; };
+		A559080A226E055A00D06C7B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5590809226E055A00D06C7B /* AppSettings.swift */; };
+		A559080E226E1D9E00D06C7B /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559080D226E1D9E00D06C7B /* AppSettingsViewController.swift */; };
 		A5990CBB2215A9F6001EE12E /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5990CBA2215A9F6001EE12E /* QuestionGroupCell.swift */; };
 		A5990CBE2216DA18001EE12E /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5990CBD2216DA18001EE12E /* QuestionStrategy.swift */; };
 		A5990CC02216DFDE001EE12E /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5990CBF2216DFDE001EE12E /* SequentialQuestionStrategy.swift */; };
@@ -63,6 +65,8 @@
 		49DABA0B21BDB6ED00AEB684 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		A54A15BE21E6445900289F1E /* SelectQuestioinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestioinGroupViewController.swift; sourceTree = "<group>"; };
 		A5590807226DD10F00D06C7B /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
+		A5590809226E055A00D06C7B /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		A559080D226E1D9E00D06C7B /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		A5990CBA2215A9F6001EE12E /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
 		A5990CBD2216DA18001EE12E /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
 		A5990CBF2216DFDE001EE12E /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
@@ -114,9 +118,9 @@
 				49DAB9FB21BD586100AEB684 /* AppDelegate */,
 				49DAB9FF21BD5A6C00AEB684 /* Controllers */,
 				49DAB9FE21BD5A6900AEB684 /* Models */,
-				49DAB9FC21BD5A5A00AEB684 /* Resources */,
 				A5990CBC2216D744001EE12E /* Strategies */,
 				49DABA0021BD5AA000AEB684 /* Views */,
+				49DAB9FC21BD5A5A00AEB684 /* Resources */,
 			);
 			path = RabbleWabble;
 			sourceTree = "<group>";
@@ -144,6 +148,7 @@
 				49DABA0121BD602E00AEB684 /* Question.swift */,
 				49DABA0321BD627600AEB684 /* QuestionGroup.swift */,
 				49DABA0521BD63BE00AEB684 /* QuestionGroupData.swift */,
+				A5590809226E055A00D06C7B /* AppSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			children = (
 				A54A15BE21E6445900289F1E /* SelectQuestioinGroupViewController.swift */,
 				49DAB9EB21BD564900AEB684 /* QuestionViewController.swift */,
+				A559080D226E1D9E00D06C7B /* AppSettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,11 +298,13 @@
 			files = (
 				A5990CC02216DFDE001EE12E /* SequentialQuestionStrategy.swift in Sources */,
 				49DABA0221BD602E00AEB684 /* Question.swift in Sources */,
+				A559080A226E055A00D06C7B /* AppSettings.swift in Sources */,
 				49DAB9EC21BD564900AEB684 /* QuestionViewController.swift in Sources */,
 				A5590808226DD10F00D06C7B /* RandomQuestionStrategy.swift in Sources */,
 				49DAB9EA21BD564900AEB684 /* AppDelegate.swift in Sources */,
 				49DABA0421BD627600AEB684 /* QuestionGroup.swift in Sources */,
 				49DABA0C21BDB6ED00AEB684 /* QuestionView.swift in Sources */,
+				A559080E226E1D9E00D06C7B /* AppSettingsViewController.swift in Sources */,
 				A54A15BF21E6445900289F1E /* SelectQuestioinGroupViewController.swift in Sources */,
 				49DABA0621BD63BE00AEB684 /* QuestionGroupData.swift in Sources */,
 				A5990CBE2216DA18001EE12E /* QuestionStrategy.swift in Sources */,

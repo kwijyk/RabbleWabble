@@ -102,7 +102,7 @@ class QuestionViewController: UIViewController {
     @IBAction func handleIncorrect(_ sender: Any) {
         let question = questionStrategy.currentQuestion()
         questionStrategy.markQuestionIncorrect(question)
-        questionView.correctCountLabel.text = String(questionStrategy.incorrectCount)
+        questionView.incorrectCountLabel.text = String(questionStrategy.incorrectCount)
         showNextQuestion()
     }
     
