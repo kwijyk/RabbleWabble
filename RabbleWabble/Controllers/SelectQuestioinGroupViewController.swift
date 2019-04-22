@@ -30,7 +30,7 @@ class SelectQuestioinGroupViewController: UIViewController {
                                  sender: Any?) {
         guard let viewController = segue.destination
             as? QuestionViewController else { return }
-        viewController.questionGroup = selectedQuestionGroup
+        viewController.questionStrategy = RandomQuestionStrategy(questionGroup: selectedQuestionGroup)
         viewController.delegate = self
     }
     
@@ -64,14 +64,17 @@ extension SelectQuestioinGroupViewController: UITableViewDataSource, UITableView
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+//     @IBAction func back(_ segue: UIStoryboardSegue) {
+//        print("Back")
+//    }
+    
 }
 
 extension SelectQuestioinGroupViewController: QuestionViewControllerDelegate {
     
     func questionViewController(
         _ viewController: QuestionViewController,
-        didCancel questionGroup: QuestionGroup,
-        at questionIndex: Int) {
+        didCancel quastionStrategy: QuestionStrategy) {
         
         navigationController?.popToViewController(self,
                                                   animated: true)
@@ -79,7 +82,7 @@ extension SelectQuestioinGroupViewController: QuestionViewControllerDelegate {
     
     func questionViewController(
         _ viewController: QuestionViewController,
-        didComplete questionGroup: QuestionGroup) {
+        didComplete quastionStrategy: QuestionStrategy) {
         
         navigationController?.popToViewController(self,
                                                   animated: true)

@@ -13,12 +13,11 @@ protocol QuestionViewControllerDelegate: class {
 
     func questionViewController(
         _ viewController: QuestionViewController,
-        didCancel questionGroup: QuestionGroup,
-        at questionIndex: Int)
+        didCancel questionStratagy: QuestionStrategy)
     
     func questionViewController(
         _ viewController: QuestionViewController,
-        didComplete questionGroup: QuestionGroup)
+        didComplete questionStratagy: QuestionStrategy)
 }
 
 class QuestionViewController: UIViewController {
@@ -26,9 +25,9 @@ class QuestionViewController: UIViewController {
     // MARK: - Instance Properties
     public var delegate: QuestionViewControllerDelegate?
     
-    public var questionGroup: QuestionGroup! {
+    public var questionStrategy: QuestionStrategy! {
         didSet {
-            navigationItem.title = questionGroup.title
+            navigationItem.title = questionStrategy.title
         }
     }
     
@@ -42,10 +41,6 @@ class QuestionViewController: UIViewController {
         return item
         }()
     
-    public var questionIndex = 0
-    
-    public var correctCount = 0
-    public var incorrectCount = 0
     
     public var questionView: QuestionView! {
         guard isViewLoaded else { return nil }
@@ -57,7 +52,6 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         showQuestion()
         setupCancelButton()
-        showQuestion()
     }
     
     private func setupCancelButton() {
@@ -74,12 +68,12 @@ class QuestionViewController: UIViewController {
     @objc private func handleCancelPressed(sender: UIBarButtonItem) {
         delegate?.questionViewController(
             self,
-            didCancel: questionGroup,
-            at: questionIndex)
+            didCancel: questionStrategy)
     }
     
     private func showQuestion() {
-        let question = questionGroup.questions[questionIndex]
+        
+        let question = questionStrategy.currentQuestion()
         
         questionView.answerLabel.text = question.answer
         questionView.promptLabel.text = question.prompt
@@ -88,7 +82,7 @@ class QuestionViewController: UIViewController {
         questionView.answerLabel.isHidden = true
         questionView.hintLabel.isHidden = true
         
-        questionIndexItem.title = "\(questionIndex + 1)/\(questionGroup.questions.count)"
+        questionIndexItem.title = questionStrategy.questionIndexTitle()
     }
 
     @IBAction func toggleAnswerLabels(_ sender: Any) {
@@ -99,22 +93,23 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func handleCorrect(_ sender: Any) {
-        correctCount += 1
-        questionView.correctCountLabel.text = "\(correctCount)"
+        let question = questionStrategy.currentQuestion()
+        questionStrategy.markQuestionCorrect(question)
+        questionView.correctCountLabel.text = String(questionStrategy.correctCount)
         showNextQuestion()
     }
     
     @IBAction func handleIncorrect(_ sender: Any) {
-        incorrectCount += 1
-        questionView.incorrectCountLabel.text = "\(incorrectCount)"
+        let question = questionStrategy.currentQuestion()
+        questionStrategy.markQuestionIncorrect(question)
+        questionView.correctCountLabel.text = String(questionStrategy.incorrectCount)
         showNextQuestion()
     }
     
 
     private func showNextQuestion() {
-        questionIndex += 1
-        guard questionIndex < questionGroup.questions.count else {
-            delegate?.questionViewController(self, didComplete: questionGroup)
+        guard questionStrategy.advanceToNextQuestion() else {
+            delegate?.questionViewController(self, didComplete: questionStrategy)
             return
         }
         showQuestion()
